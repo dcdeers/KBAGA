@@ -1,0 +1,249 @@
+﻿/*-----------------GENERAL------------------*/
+/** {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+::selection {
+    color: #301934;
+}*/
+
+
+/* Reset some basic elements */
+/*body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FAF9F6;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}*/
+
+/* Navbar styling */
+/*.navbar {
+    background-color: #BDB5D5;
+    padding: 0.2rem;
+    border-radius: 2px;
+}
+
+.icons1 img {
+    max-height: 70px;
+    max-width: 70px;
+}
+
+.icons2 a {
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    width: 2.2rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    border-radius: 50%;
+    background-color: #E6E6FA;
+}
+
+    .icons2 a:hover {
+        color: #301934;
+        transform: rotate(360deg);
+    }
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: green;
+    text-decoration: none;
+}
+
+.navbar-toggler {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler-icon {
+    width: 30px;
+    height: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-collapse {
+    flex-grow: 1;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: antiquewhite;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+    .nav-link:hover {
+        color: #301934;
+    }*/
+
+/* Responsive styling */
+/*@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-collapse {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: left;
+        padding: 1rem;
+    }
+
+    .navbar-toggler {
+        align-self: flex-end;
+    }
+}*/
+
+/*-----------------ABOUT------------------*/
+
+
+/*.container {
+    width: 70%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.abt {
+    width: 100%;
+    height: 30%;
+    padding: 50px 0 100px;*/ /* Added bottom padding to prevent touching the footer */
+    /*background-color: #FCF5E5;
+}
+
+.about {
+    text-align: center;
+}
+
+.sub-heading {
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.heading {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+    .image img {
+        width: 100%;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+.content {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: left;
+}
+
+    .content h3 {
+        font-size: 26px;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .content p {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        text-align: center;
+    }
+}
+
+
+footer {
+    position: sticky;
+    background-color: #FAF9F6;
+    color: antiquewhite;
+    text-align: center;
+    padding: 0px;
+    position: relative;
+    bottom: 0;
+    width: 10%;
+    clear: both;
+}*/
