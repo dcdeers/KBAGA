@@ -1,0 +1,45 @@
+﻿@page
+@model MenuModel
+@{
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Menu[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Menu[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Menu[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Menu[0].ImageFile)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+    @foreach (var item in Model.Menu) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+
+            <th>
+                <img src="@Url.Content("/css/Images/" + item.ImageFile)" alt="@item.Name" style="width:100px;height:75px;" />
+            </th>
+        </tr>
+}
+    </tbody>
+</table>
