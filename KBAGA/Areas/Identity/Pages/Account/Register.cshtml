@@ -8,7 +8,7 @@
 
 <div class="row">
 
-    <div class=col-lg-6 mx-auto rounded border p-">
+    <div class="col-lg-6 mx-auto rounded border p-4">
         <h2 class="text-center mb-3">Register a new account.</h2>
         <hr />
         <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
@@ -46,3 +46,24 @@
             <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
         </form>
     </div>
+
+    <div class="col-md-6 col-md-offset-2">
+        <section>
+
+            <div>
+                <img class="rounded border p-4" src="~/css/images/BGR2.gif" />
+
+            </div>
+
+        </section>
+    </div>
+
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
+
