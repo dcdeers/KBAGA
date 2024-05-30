@@ -71,6 +71,17 @@ namespace KBAGA.Areas.Identity.Pages.Account
         /// </summary>
         public class InputModel
         {
+
+            [Required]
+            [StringLength(10, ErrorMessage = "The first name should have a maximum of 255 characters.", MinimumLength = 6)]
+            [Display(Name = "Firstname")]
+            public string FirstName { get; set; }
+
+            [Required]
+            [StringLength(10, ErrorMessage = "The last name should have a maximum of 255 characters.", MinimumLength = 6)]
+            [Display(Name = "Lastname")]
+            public string LastName { get; set; }
+
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
@@ -114,6 +125,9 @@ namespace KBAGA.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
+
+                user.FirstName = Input.FirstName;
+                user.LastName = Input.LastName;
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
