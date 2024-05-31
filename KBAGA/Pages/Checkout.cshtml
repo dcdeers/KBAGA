@@ -3,3 +3,219 @@
 @{
     ViewData["Title"] = "Checkout";
 }
+
+@* <table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Menu[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Menu[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Menu[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Menu[0].ImageFile)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Menu)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+
+                <th>
+                    <img src="@Url.Content("/css/Images/" + item.ImageFile)" alt="@item.Name" style="width:100px;height:75px;" />
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>
+ *@
+
+@* <table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Menu[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Menu[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Menu[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Menu[0].ImageFile)
+            </th>
+            <th></th>
+            <th></th> <!-- Add an additional column for the checkout button -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Menu)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    <img src="@Url.Content("/css/Images/" + item.ImageFile)" alt="@item.Name" style="width:100px;height:75px;" />
+                </td>
+                <td>
+                    <!-- Add a checkout button for each item -->
+
+                <a href="Index" class="btn" onclick="showPaymentMessage()">Checkout</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    function showPaymentMessage() {
+        Display the payment message
+        document.getElementById("paymentMessage").style.display = "block";
+
+        You can optionally redirect the user to another page after showing the message
+        window.location.href = "PaymentConfirmationPage"; // Replace "PaymentConfirmationPage" with the actual URL
+    }
+</script> *@
+
+@* <table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Menu[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Menu[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Menu[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Menu[0].ImageFile)
+            </th>
+            <th></th>
+            <th></th> <!-- Add an additional column for the checkout button -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Menu)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    <img src="@Url.Content("/css/Images/" + item.ImageFile)" alt="@item.Name" style="width:100px;height:75px;" />
+                </td>
+                <td>
+                    <!-- Add a checkout button for each item -->
+                    <a href="javascript:void(0)" class="btn" onclick="showPaymentMessage('@item.Name')">Checkout</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div id="paymentMessage" style="display: none;">
+    Payment Successful! Thank you for your purchase.
+</div>
+
+<script>
+    function showPaymentMessage(itemName) {
+        // Display the payment message
+        document.getElementById("paymentMessage").style.display = "block";
+
+        // You can optionally redirect the user to another page after showing the message
+        // window.location.href = "PaymentConfirmationPage"; // Replace "PaymentConfirmationPage" with the actual URL
+
+        // You can also use the itemName parameter to customize the message, if needed
+    }
+</script>
+ *@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Other head elements -->
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Menu[0].Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Menu[0].Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Menu[0].Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Menu[0].ImageFile)
+                </th>
+                <th></th>
+                <th></th> <!-- Add an additional column for the checkout button -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Menu)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        <img src="@Url.Content("/css/Images/" + item.ImageFile)" alt="@item.Name" style="width:100px;height:75px;" />
+                    </td>
+                    <td>
+                        <!-- Add a checkout button for each item -->
+                        <a href="javascript:void(0)" class="btn" onclick="showPaymentMessage('@item.Name')">Checkout</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div id="paymentMessage">
+        Payment Successful! Thank you for your purchase.
+    </div>
+
+    <!-- Include the checkout.js file -->
+    <script src="checkout.js"></script>
+</body>
+</html>
